@@ -12,14 +12,14 @@ public class UserRegistrationDto {
 	public UserRegistrationDto(){
 		
 	}
-	public UserRegistrationDto(String firstName, String lastName, String email, String password, String birthday, String phoneNumber, boolean isSigned) {
+	public UserRegistrationDto(String firstName, String lastName,  String password, String email, String birthday, String phoneNumber, boolean isSigned) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.password = password;
 		this.email = email;
 		this.birthday = birthday;
 		this.phoneNumber = phoneNumber;
-		this.password = password;
 		this.isSigned = isSigned;
 	}
 	public String getFirstName() {

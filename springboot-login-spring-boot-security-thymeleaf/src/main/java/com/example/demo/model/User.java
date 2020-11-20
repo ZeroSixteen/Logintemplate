@@ -50,12 +50,12 @@ public class User {
 	public User() {
 		
 	}
-	public User(String firstName, String lastName, String email, String birthday, String phoneNumber, String password, boolean isSigned,Collection<Role> roles) {
+	public User(String firstName, String lastName, String password, String email, String birthday, String phoneNumber, boolean isSigned,Collection<Role> roles) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.email = email;
 		this.password = password;
+		this.email = email;
 		this.roles = roles;
 		this.birthday = birthday;
 		this.phoneNumber = phoneNumber;
