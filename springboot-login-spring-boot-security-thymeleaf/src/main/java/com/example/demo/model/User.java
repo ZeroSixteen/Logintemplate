@@ -33,6 +33,12 @@ public class User {
 	
 	private String password;
 	
+	private String birthday;
+	
+	private String phoneNumber;
+	
+	private boolean isSigned;
+	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(
 		name = "users_roles",
@@ -44,13 +50,16 @@ public class User {
 	public User() {
 		
 	}
-	public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+	public User(String firstName, String lastName, String email, String birthday, String phoneNumber, String password, boolean isSigned,Collection<Role> roles) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
+		this.birthday = birthday;
+		this.phoneNumber = phoneNumber;
+		this.isSigned = isSigned;
 	}
 
 	public Long getId() {
@@ -92,7 +101,25 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
+	public String getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public boolean isSigned() {
+		return isSigned;
+	}
+	public void setSigned(boolean isSigned) {
+		this.isSigned = isSigned;
+	}
 	public Collection<Role> getRoles() {
 		return roles;
 	}
